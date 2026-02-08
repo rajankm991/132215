@@ -229,16 +229,17 @@ function type(){
     const el=document.getElementById("l"+l);
     el.textContent+=lines[l][c++];
     if(c<lines[l].length){
-        setTimeout(type,60);
+        setTimeout(type,10);   // 🔥 faster typing (was 60)
     }else{
         c=0; l++;
-        setTimeout(type,800);
+        setTimeout(type,200); // 🔥 shorter pause (was 800)
         if(l===lines.length){
             yesForever.style.display="block";
         }
     }
 }
-setTimeout(type,1200);
+setTimeout(type,400); // 🔥 quicker start (was 1200)
+
 
 /* YES → FINAL */
 function celebrate(){
